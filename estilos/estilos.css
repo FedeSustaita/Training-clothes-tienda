@@ -63,6 +63,25 @@ header{ /*header*/
 
 .img-logo{
     width: 200px;
+    animation-name: logo;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: none;
+    animation-play-state: running;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(.5);
+    }
+
+    50% {
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
 
 header img{
@@ -82,18 +101,27 @@ a{
     align-self: center;
 }
     
-li{
+.menu-li{
     width: 25%;
     position: relative;
     font-size: 17px;
-    margin: 5px 30px;
+    margin: 0px 30px;
     color: white;
+    padding: 4px 5px;
+    transition: all 0.3s;
+}
+
+.menu-li:hover{
+    background-color: rgb(71, 71, 71);
+    border-radius: 6px;
 }
 
 ul ul{
     position: absolute;
     display: none;
     color: white;
+    margin-top: 4px;
+    padding-top: 9px;
     background-color: rgb(20, 20, 20);
 }
     
@@ -102,7 +130,11 @@ ul ul li{
     width: auto;
     padding: 4px 8px;
     text-align: start;
-    
+    transition: all 0.3s;
+}
+ul ul li:hover{
+    background-color: rgb(71, 71, 71);
+    border-radius: 6px;
 }
     
 ul li:hover ul{
@@ -131,7 +163,29 @@ main{   /*main*/
 }
 .fa-circle-arrow-up:hover{
     color: rgba(255, 255, 255, 0.233);
-    transition: all 0.4s;
+    animation-name: circle;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: none;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+        color: white;
+    }
+
+    50% {
+        color: #555555;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        color: #777777;
+    }
 }
 
 .div-container{
@@ -141,7 +195,23 @@ main{   /*main*/
 }
 
 .foto-carrusel{
-    height: 500px;
+    height: 400px;
+    animation-name: carrusel;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: none;
+    animation-play-state: running;
+}
+
+@keyframes carrusel {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform:translateY(0px)
+    }
 }
 
 .main-article-div{
@@ -151,7 +221,14 @@ main{   /*main*/
 }
 
 .img-foto{
+    width: 275px;
+    -webkit-filter: grayscale(100%);
+    transition: all 0.4s;
+}
+
+.img-foto:hover{
     width: 300px;
+    -webkit-filter: grayscale(0%);
 }
 
 .foto-right{
@@ -793,7 +870,11 @@ footer{ /*footer*/
 
 .catalogo-img{
     width: 200px; 
+    transition: all 0.4s;
     /*margin: 50px;*/
+}
+.catalogo-img:hover{
+    width: 225px;
 }
 
 
